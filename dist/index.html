@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es-GT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#29201d">
+  <meta name="description" content="Prototipo operativo de Pollos Express. Registra una venta y sigue la orden en cocina, inventario y gerencia.">
+  <title>Pollos Express · Demo operativa</title>
+  <link rel="icon" href="./marca.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Ir al contenido</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#caja" aria-label="Pollos Express, ir a caja">
+        <img src="./marca.svg" width="44" height="44" alt="">
+        <span>POLLOS <strong>EXPRESS</strong></span>
+      </a>
+      <div class="side-label">OPERACIÓN</div>
+      <nav id="navigation" aria-label="Vistas de operación"></nav>
+      <div class="sidebar-footer">
+        <button class="side-action" id="guide" type="button"></button>
+        <button class="side-action" id="reset" type="button"></button>
+        <p class="demo-label"><span></span> Ambiente de demostración</p>
+      </div>
+    </aside>
+    <div class="app">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Operación</span><span aria-hidden="true">/</span><strong id="breadcrumb">Caja</strong></div>
+        <div class="top-actions">
+          <label class="branch-picker"><span id="branch-icon" aria-hidden="true"></span><select id="branch" aria-label="Sucursal"></select></label>
+          <button class="connection" id="connection" type="button" aria-pressed="false"></button>
+        </div>
+      </header>
+      <main id="workspace" tabindex="-1"></main>
+    </div>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <div id="notice" class="notice" role="status" aria-atomic="true"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
